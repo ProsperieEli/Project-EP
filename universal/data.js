@@ -63,7 +63,7 @@ export const neededItems = [{
     name: 'dust-mask',
     needed: true,
     description: 'Dust Mask'        
-},{
+}, {
     id: 10,
     name: 'sheeting',
     needed: true,
@@ -98,20 +98,121 @@ export const neededItems = [{
     name: 'cell-phone',
     needed: true,
     description: 'Cell phone (with chargers and a backup battery)'        
-}]
+}];
 
-// export const       
-        
-//         Prescription eyeglasses and contact lens solution
-//         Infant formula, bottles, diapers, wipes and diaper rash cream
-//         Pet food and extra water for your pet
-//         Cash or traveler's checks
-//         Important family documents such as copies of insurance policies, identification and bank account records saved electronically or in a waterproof, portable container
-//         Sleeping bag or warm blanket for each person
-//         Complete change of clothing appropriate for your climate and sturdy shoes
-//         Fire extinguisher
-//         Matches in a waterproof container
-//         Feminine supplies and personal hygiene items
-//         Mess kits, paper cups, plates, paper towels and plastic utensils
-//         Paper and pencil
-//         Books, games, puzzles or other activities for children}
+export const suggestedItems = [
+    {
+        id: 101,
+        name: 'eyewear',
+        needed: false,
+        description: 'Prescription eyeglasses and contact lens solution'        
+    },
+    {
+        id: 102,
+        name: 'baby',
+        needed: false,
+        description: 'Infant formula, bottles, diapers, wipes and diaper rash cream'        
+    },
+    {
+        id: 102,
+        name: 'baby',
+        needed: false,
+        description: 'Infant formula, bottles, diapers, wipes and diaper rash cream'        
+    },
+    {
+        id: 103,
+        name: 'baby',
+        needed: false,
+        description: 'Infant formula, extra clothes, bottles, diapers, wipes and diaper rash cream'        
+    },
+    {
+        id: 104,
+        name: 'masks',
+        needed: true,
+        description: 'Masks (for everyone ages 2 and above)'        
+    },
+    {
+        id: 105,
+        name: 'disinfectants',
+        needed: true,
+        description: 'Soap, hand sanitizer, disinfecting wipes to disinfect surfaces'        
+    },
+    {
+        id: 106,
+        name: 'medications',
+        needed: false,
+        description: 'Prescription medications'        
+    },
+    {
+        id: 107,
+        name: 'otc-meds',
+        needed: false,
+        description: 'Non-prescription medications such as pain relievers, anti-diarrhea medication, antacids or laxatives'        
+    },
+    {
+        id: 108,
+        name: 'pet',
+        needed: false,
+        description: 'Pet food and extra water for your pet'        
+    },
+    {
+        id: 109,
+        name: 'cash',
+        needed: false,
+        description: `Cash or traveler's checks`        
+    },
+    {
+        id: 110,
+        name: 'documents',
+        needed: false,
+        description: `Important family documents such as copies of insurance policies, identification and bank account records saved electronically or in a waterproof, portable container`   
+    },
+    {
+        id: 111,
+        name: 'blankets',
+        needed: false,
+        description: 'Sleeping bag or warm blanket for each person'        
+    },
+    {
+        id: 112,
+        name: 'clothing',
+        needed: false,
+        description: 'Complete change of clothing appropriate for your climate'        
+    },
+    {
+        id: 113,
+        name: 'extinguisher',
+        needed: false,
+        description: 'Fire extinguisher'        
+    },
+    {
+        id: 114,
+        name: 'matches',
+        needed: false,
+        description: 'Matches in a waterproof container'        
+    },
+    {
+        id: 115,
+        name: 'hygiene',
+        needed: false,
+        description: 'Menstrual supplies and personal hygiene items'        
+    },
+    {
+        id: 116,
+        name: 'mess-kit',
+        needed: false,
+        description: 'Mess kits, paper cups, plates, paper towels and plastic utensils'        
+    },
+    {
+        id: 117,
+        name: 'writing',
+        needed: false,
+        description: 'Paper and pencil'        
+    },
+    {
+        id: 118,
+        name: 'games',
+        needed: false,
+        description: 'Books, games, puzzles, stuffies or other activities for children'        
+    }
+];
