@@ -17,10 +17,12 @@
             <img class="logo right-header" src="./assets/EP.png" alt="emergency preparedness logo">
     </header>
     <main>
+        <section>
+            <p>Disaster can strike at any time. The best thing to do is to be prepared </p>
+        </section>
         <section class="main-section">
             <form id="user-form">
                 <label>
-                    <span>Adults</span>
                     <select id="adults" name="adults">
                         <option value="0">0</option>
                         <option value="1" selected>1</option>
@@ -33,9 +35,9 @@
                         <option value="8">8</option>
                         <option value="9">9</option>
                     </select>
+                    <span>Adults</span>
                 </label>
                 <label>
-                    <span>Kids</span>
                     <select id="kids" name="kids">
                         <option value="0" selected>0</option>
                         <option value="1">1</option> 
@@ -48,9 +50,9 @@
                         <option value="8">8</option>
                         <option value="9">9</option>
                     </select>
+                    <span>Kids</span>
                 </label>
                 <label>
-                    <span>Seniors</span>
                     <select id="seniors" name="seniors">
                         <option value="0" selected>0</option>
                         <option value="1">1</option>
@@ -63,6 +65,7 @@
                         <option value="8">8</option>
                         <option value="9">9</option>
                     </select>
+                    <span>Seniors</span>
                 </label>
                 <label>
                     <input type="checkbox" id="under-3" name="under-3"> <span>Do you have kids under 3?</span>    
@@ -83,7 +86,6 @@
                     <input type="checkbox" id="transportation" name="transportation"> <span>Do you have motorized transportation?</span>    
                 </label>
                 <label>
-                    <span>Salary</span>
                     <select id="salary" name="salary">
                         <option value="0" selected>Decline</option>
                         <option value="0">&lt$50,000</option>
@@ -91,9 +93,9 @@
                         <option value="100000">$100,000 - $200,000</option>
                         <option value="200000">&gt$200,000</option>
                     </select>
+                    <span>Salary</span>
                 </label>
                 <label>
-                    <span>Emergency Funds</span>
                     <select id="emergency-funds" name="emergency-funds">
                         <option value="0" selected>Decline</option>
                         <option value="0">&lt$50,000</option>
@@ -101,7 +103,11 @@
                         <option value="100000">$100,000 - $200,000</option>
                         <option value="200000">&gt$200,000</option>
                     </select>
+                    <span>Emergency Funds</span>
                 </label>
+                <div id="btn-container">
+                    <button id="sub-btn">Submit</button>
+                </div>
             </form>
         </section>
     </main>
