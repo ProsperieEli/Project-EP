@@ -1,16 +1,16 @@
 function userCreate(form){
     const userinput = {
-        YoungChildren: form.get('under-3'),
-        Dependents: form.get('kids'),
-        Adults: form.get('adults'),
-        Seniors: form.get('seniors'),
-        Salary: form.get('salary'),
-        Pets: form.get('pets'),
-        Savings: form.get('emergency-funds'),
-        HaveTransport: form.get('havetransport'),
-        PrescriptionMed: form.get('prescriptionmed'),
-        PrescriptionEye: form.get('prescriptioneye'),
-        Assets: form.get('assets'),
+        youngChildren: form.get('under-3'),
+        dependents: form.get('kids'),
+        adults: form.get('adults'),
+        seniors: form.get('seniors'),
+        salary: form.get('salary'),
+        pets: form.get('pets'),
+        savings: form.get('emergency-funds'),
+        haveTransport: form.get('havetransport'),
+        prescriptionMed: form.get('prescriptionmed'),
+        prescriptionEye: form.get('prescriptioneye'),
+        assets: form.get('assets'),
     };
     return userinput;
 }
