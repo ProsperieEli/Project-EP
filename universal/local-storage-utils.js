@@ -9,7 +9,7 @@ export function getUser() {
 export function setUser(user) {
     const stringyUser = JSON.stringify(user);
 
-    localStorage.setItem(stringyUser);
+    localStorage.setItem(USER, stringyUser);
 }
 
 export function getEssentialsList() {
