@@ -19,7 +19,7 @@
 import { setUser } from '../universal/local-storage-utils.js';
 import userCreate from './usercreate.js';
 
-const form = document.getElementById('  ');
+const form = document.getElementById('user-form');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
