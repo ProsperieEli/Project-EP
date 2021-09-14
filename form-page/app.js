@@ -16,6 +16,20 @@
     // Salary Range* (dropdown)
     // Emergency funds (dropdown)
 
+import { setUser } from '../universal/local-storage-utils.js';
+import userCreate from './usercreate.js';
+
+const form = document.getElementById('  ');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const user = userCreate(data);
+
+    setUser(user);
+    window.location.href = './preppy-page/index.html';
+});
+
 // submit
 
 // JS****************************
