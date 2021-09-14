@@ -114,16 +114,10 @@ export const suggestedItems = [
         description: 'Infant formula, bottles, diapers, wipes and diaper rash cream'        
     },
     {
-        id: 102,
-        name: 'baby',
-        render: false,
-        description: 'Infant formula, bottles, diapers, wipes and diaper rash cream'        
-    },
-    {
         id: 103,
-        name: 'baby',
+        name: 'transportation',
         render: false,
-        description: 'Infant formula, extra clothes, bottles, diapers, wipes and diaper rash cream'        
+        description: 'links to additional transportion'        
     },
     {
         id: 104,
