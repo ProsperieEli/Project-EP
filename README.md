@@ -9,7 +9,22 @@
 8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
 9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
 
+*Preppy Page Plan*
+-------HTML-------
+- two progress bars at top (fixed to page)
+- button to move to results page / a tag
+- h1 essential title
+- forEach? place to render each essential item (grid 5x4 or table?)
+- h1 suggested title
+- place to render each suggested item
 
+-------JS-------
+- Chart.js create two progress bars: essential and suggested
+- add completed: false property to each item
+- render each essential item
+- render each suggested
+    - checking if need === true before rendering
 
-## Results Index: 
-https://en.wikipedia.org/wiki/List_of_natural_disasters_in_the_United_States
+- make each rendered item clickable
+    - completed: true on click
+    - toggleable? stretch goal

@@ -6,68 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/form-page.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png" />
-        </div>
+            <h1 class="left-header">Emergency Preparedness</h1>
+            <img class="logo right-header" src="./assets/EP.png" alt="emergency preparedness logo">
     </header>
     <main>
+        <section>
+            <p>Disaster can strike at any time. The best thing to do is to be prepared </p>
+        </section>
         <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-
+            <form id="user-form">
+                <label>
+                    <select id="adults" name="adults">
+                        <option value="0">0</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <span>Adults</span>
+                </label>
+                <label>
+                    <select id="kids" name="kids">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option> 
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <span>Kids</span>
+                </label>
+                <label>
+                    <select id="seniors" name="seniors">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <span>Seniors</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="under-3" name="under-3"> <span>Do you have kids under 3?</span>    
+                </label>
+                <label>
+                    <input type="checkbox" id="pets" name="pets"> <span>Do you have pets?</span>    
+                </label>
+                <label>
+                    <input type="checkbox" id="prescription" name="prescription"> <span>Do you take prescription medication?</span>    
+                </label>
+                <label>
+                    <input type="checkbox" id="eyewear" name="eyewear"> <span>Do you have prescription eyewear?</span>    
+                </label>
+                <label>
+                    <input type="checkbox" id="assets" name="assets"> <span>Do you have insured assets?</span>    
+                </label>
+                <label>
+                    <input type="checkbox" id="transportation" name="transportation"> <span>Do you have motorized transportation?</span>    
+                </label>
+                <label>
+                    <select id="salary" name="salary">
+                        <option value="0" selected>Decline</option>
+                        <option value="0">&lt$50,000</option>
+                        <option value="50000">$50,000 - $100,000</option>
+                        <option value="100000">$100,000 - $200,000</option>
+                        <option value="200000">&gt$200,000</option>
+                    </select>
+                    <span>Salary</span>
+                </label>
+                <label>
+                    <select id="emergency-funds" name="emergency-funds">
+                        <option value="0" selected>Decline</option>
+                        <option value="0">&lt$50,000</option>
+                        <option value="50000">$50,000 - $100,000</option>
+                        <option value="100000">$100,000 - $200,000</option>
+                        <option value="200000">&gt$200,000</option>
+                    </select>
+                    <span>Emergency Funds</span>
+                </label>
+                <div id="btn-container">
+                    <button id="sub-btn">Submit</button>
+                </div>
+            </form>
         </section>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+        
     </footer>
 
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./form-page/app.js"></script>
 </body>
 
 </html>
