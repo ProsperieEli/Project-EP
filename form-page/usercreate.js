@@ -1,12 +1,12 @@
 function userCreate(form){
     const userinput = {
-        YoungChildren: form.get('youngchildren'),
-        Dependents: form.get('dependents'),
+        YoungChildren: form.get('under-3'),
+        Dependents: form.get('kids'),
         Adults: form.get('adults'),
         Seniors: form.get('seniors'),
         Salary: form.get('salary'),
         Pets: form.get('pets'),
-        Savings: form.get('savings'),
+        Savings: form.get('emergency-funds'),
         HaveTransport: form.get('havetransport'),
         PrescriptionMed: form.get('prescriptionmed'),
         PrescriptionEye: form.get('prescriptioneye'),
