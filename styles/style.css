@@ -1,8 +1,11 @@
+:root {
+    --primary-color: black;
+    --secondary-color: rgba(255, 255, 255, 0.397);
+}
 
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding: 0;    
 }
 
 header {
@@ -10,7 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    background-color: black;
+    background-color: var(--primary-color);
 }
 
 .left-header {

@@ -1,13 +1,68 @@
 
-form {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
+body {
+    min-height: 100%;
+    background-image: url(../assets/form-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: auto;
 }
 
+main {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    min-height: 100%;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section {
+    min-height: 100%;
+}
+
+.form-description {
+    font-size: 1.5rem;
+    position: relative;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 200px;
+}
+
+.form-description > p {
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+
+}
+
+form {
+    font-size: 1.4rem;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+select {
+    font-size: 1.1rem;
+}
+
+/* add spacing between each child in form */
 form > * {
-    margin: 5px;
+    margin: 10px;
 }
 
 #btn-container {
@@ -16,11 +71,11 @@ form > * {
 }
 
 #sub-btn {
-
+    margin-top: 20px;
     border: none;
     border-radius: 7px;
     color: white;
-    background-color: black;
-    width: 60px;
-    height: 30px;
+    background-color: var(--primary-color);
+    width: 100px;
+    height: 50px;
 }
