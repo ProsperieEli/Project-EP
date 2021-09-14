@@ -7,27 +7,43 @@ const suggestedUL = document.getElementById('suggested-ul');
 const suggestedH1 = document.getElementById('suggestedh1');
 
 const user = getUser();
-const essentialItems = getEssentialsList();
-const suggestedItems = getSuggestedList();
+const essentialItemsList = getEssentialsList();
+const suggestedItemsList = getSuggestedList();
 
 
 function renderEssentialsNeeded(essentialItems){
     essentialsUL.innerHTML = '';
 
     for (let item of essentialItems) {
+
         const listItemEl = document.createElement('li');
         const listItem = document.createElement('p');
         
         listItemEl.classList.add('list-itemEl');
         listItem.classList.add('list-item');
 
-        listItem.textContent = item.itemsNeeded
+        listItem.textContent = item.itemsNeeded;
+
+        essentialsUL.append(essentialH1, listItemEl, listItem);
     }
     
 }
 
-function renderSuggestedNeeded(){
-    const suggestedUL = document.createElement('ul');
+function renderSuggestedNeeded(suggestedItems){
+    suggestedUL.innerHTML = '';
+
+    for (let item of suggestedItems) {
+
+        const listItemEl = document.createElement('li');
+        const listItem = document.createElement('p');
+        
+        listItemEl.classList.add('list-itemEl');
+        listItem.classList.add('list-item');
+
+        listItem.textContent = item.itemsNeeded;
+
+        suggestedUL.append(suggestedH1, listItemEl, listItem);
+    }
 }
 
 // - add completed: false property to each item
