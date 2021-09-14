@@ -30,14 +30,14 @@ function renderEssentialsNeeded(essentialItems){
 
         essentialsUL.append(essentialH1, listItemEl, listItem);
 
-        listItemEl.addEventListener('click', () => {
-            itemCompleted(todo.id);
-            toDoItem.classList.add('done');
+        // listItemEl.addEventListener('click', () => {
+        //     itemCompleted(todo.id);
+        //     toDoItem.classList.add('done');
             
-        });
-        if (todo.completed === 'true') {
-            toDoItem.classList.add('done');
-        }
+        // });
+        // if (todo.completed === 'true') {
+        //     toDoItem.classList.add('done');
+        // }
     }
     
 }
