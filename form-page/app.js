@@ -26,7 +26,7 @@ form.addEventListener('submit', (e) => {
     const data = new FormData(form);
     const user = userCreate(data);
     
-    form.get;
+
  
     setUser(user);
 
