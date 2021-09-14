@@ -1,17 +1,34 @@
+import { getEssentialsList, getSuggestedList, getUser } from '../universal/local-storage-utils.js';
+
 /* eslint-disable no-undef */
+const essentialsUL = document.getElementById('essential-ul');
+const essentialH1 = document.getElementById('essentialh1');
+const suggestedUL = document.getElementById('suggested-ul');
+const suggestedH1 = document.getElementById('suggestedh1');
+
+const user = getUser();
+const essentialItems = getEssentialsList();
+const suggestedItems = getSuggestedList();
 
 
-// function renderEssentialsNeeded(){
-//     const essentialsDiv= document.getElementById('essential-div');
-//     const essentialH1 = document.getElementById('essentialh1');
-//     const essentialUL = document.createElement('ul');
-//     const 
-// }
+function renderEssentialsNeeded(essentialItems){
+    essentialsUL.innerHTML = '';
 
-// function renderSuggestedNeeded(){
-//     const suggestedDiv= document.getElementById('suggested-div');
-//     const suggestedH1 = document.getElementById('suggestedh1');
-// }
+    for (let item of essentialItems) {
+        const listItemEl = document.createElement('li');
+        const listItem = document.createElement('p');
+        
+        listItemEl.classList.add('list-itemEl');
+        listItem.classList.add('list-item');
+
+        listItem.textContent = item.itemsNeeded
+    }
+    
+}
+
+function renderSuggestedNeeded(){
+    const suggestedUL = document.createElement('ul');
+}
 
 // - add completed: false property to each item
 // - render each essential item
