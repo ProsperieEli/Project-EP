@@ -1,4 +1,4 @@
-import { getEssentialsList, getSuggestedList, getUser } from '../universal/local-storage-utils.js';
+import { getEssentialsList, getSuggestedList } from '../universal/local-storage-utils.js';
 
 /* eslint-disable no-undef */
 const essentialsUL = document.getElementById('essential-ul');
