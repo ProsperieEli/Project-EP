@@ -25,9 +25,12 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     const data = new FormData(form);
     const user = userCreate(data);
-
+    
+    form.get
+ 
     setUser(user);
-    window.location.href = './preppy-page/index.html';
+
+    window.location.href = '../preppy-page/index.html';
 });
 
 // submit

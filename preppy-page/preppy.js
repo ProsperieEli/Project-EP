@@ -1,17 +1,67 @@
+import { getEssentialsList, getSuggestedList } from '../universal/local-storage-utils.js';
+
 /* eslint-disable no-undef */
+const essentialsUL = document.getElementById('essential-ul');
+const essentialH1 = document.getElementById('essentialh1');
+const suggestedUL = document.getElementById('suggested-ul');
+const suggestedH1 = document.getElementById('suggestedh1');
+
+const essentialItemsList = getEssentialsList();
+const suggestedItemsList = getSuggestedList();
+
+renderEssentialsNeeded(essentialItemsList);
+renderSuggestedNeeded(suggestedItemsList);
 
 
-// function renderEssentialsNeeded(){
-//     const essentialsDiv= document.getElementById('essential-div');
-//     const essentialH1 = document.getElementById('essentialh1');
-//     const essentialUL = document.createElement('ul');
-//     const 
-// }
 
-// function renderSuggestedNeeded(){
-//     const suggestedDiv= document.getElementById('suggested-div');
-//     const suggestedH1 = document.getElementById('suggestedh1');
-// }
+
+function renderEssentialsNeeded(essentialItems){
+    essentialsUL.innerHTML = '';
+
+    for (let item of essentialItems) {
+
+        const listItemEl = document.createElement('li');
+        const listItem = document.createElement('p');
+        
+        listItemEl.classList.add('list-itemEl');
+        listItem.classList.add('list-item');
+
+        listItem.textContent = item.itemsNeeded;
+
+        essentialsUL.append(essentialH1, listItemEl, listItem);
+
+        listItemEl.addEventListener('click', () => {
+            itemCompleted(todo.id);
+            toDoItem.classList.add('done');
+            
+        });
+        if (todo.completed === 'true') {
+            toDoItem.classList.add('done');
+        }
+    }
+    
+}
+
+function renderSuggestedNeeded(suggestedItems){
+    suggestedUL.innerHTML = '';
+
+    for (let item of suggestedItems) {
+
+        if (item.render) {
+            const listItemEl = document.createElement('li');
+            const listItem = document.createElement('p');
+        
+            listItemEl.classList.add('list-itemEl');
+            listItem.classList.add('list-item');
+
+            listItem.textContent = item.itemsNeeded;
+
+            suggestedUL.append(suggestedH1, listItemEl, listItem);
+        } else {
+            alert('nothing to render');
+        }
+    }
+}
 
 // - add completed: false property to each item
 // - render each essential item

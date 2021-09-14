@@ -9,6 +9,15 @@
 8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
 9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
 
+<<<<<<< HEAD
+=======
+
+
+
+## Results Index: 
+https://en.wikipedia.org/wiki/List_of_natural_disasters_in_the_United_States
+
+>>>>>>> 94092326e961fd5cc6e94e4202283dc4cf5826f0
 *Preppy Page Plan*
 -------HTML-------
 - two progress bars at top (fixed to page)
@@ -28,3 +37,7 @@
 - make each rendered item clickable
     - completed: true on click
     - toggleable? stretch goal
+<<<<<<< HEAD
+=======
+
+>>>>>>> 94092326e961fd5cc6e94e4202283dc4cf5826f0
