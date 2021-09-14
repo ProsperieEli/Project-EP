@@ -6,9 +6,11 @@ const essentialH1 = document.getElementById('essentialh1');
 const suggestedUL = document.getElementById('suggested-ul');
 const suggestedH1 = document.getElementById('suggestedh1');
 
-const user = getUser();
 const essentialItemsList = getEssentialsList();
 const suggestedItemsList = getSuggestedList();
+
+renderEssentialsNeeded(essentialItemsList);
+renderSuggestedNeeded(suggestedItemsList);
 
 
 function renderEssentialsNeeded(essentialItems){
@@ -34,15 +36,19 @@ function renderSuggestedNeeded(suggestedItems){
 
     for (let item of suggestedItems) {
 
-        const listItemEl = document.createElement('li');
-        const listItem = document.createElement('p');
+        if (item.render) {
+            const listItemEl = document.createElement('li');
+            const listItem = document.createElement('p');
         
-        listItemEl.classList.add('list-itemEl');
-        listItem.classList.add('list-item');
+            listItemEl.classList.add('list-itemEl');
+            listItem.classList.add('list-item');
 
-        listItem.textContent = item.itemsNeeded;
+            listItem.textContent = item.itemsNeeded;
 
-        suggestedUL.append(suggestedH1, listItemEl, listItem);
+            suggestedUL.append(suggestedH1, listItemEl, listItem);
+        } else {
+            alert('nothing to render');
+        }
     }
 }
 
