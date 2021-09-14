@@ -4,3 +4,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: black;
+}
+
+.left-header {
+    color: white;
+    font-size: 40px;
+    position: relative;
+    left: 30px;
+}
+
+.right-header {
+    position: relative;
+    right: 30px;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+}
