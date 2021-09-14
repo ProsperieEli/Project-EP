@@ -9,6 +9,8 @@ const suggestedH1 = document.getElementById('suggestedh1');
 const essentialItemsList = getEssentialsList();
 const suggestedItemsList = getSuggestedList();
 
+console.log(essentialItemsList);
+
 renderEssentialsNeeded(essentialItemsList);
 renderSuggestedNeeded(suggestedItemsList);
 

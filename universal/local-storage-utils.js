@@ -9,32 +9,33 @@ export function getUser() {
 export function setUser(user) {
     const stringyUser = JSON.stringify(user);
 
-    localStorage.setItem(stringyUser);
+    localStorage.setItem(USER, stringyUser);
 }
 
 export function getEssentialsList() {
-    const { ItemsNeeded } = getUser();
+    const { itemsNeeded } = getUser();
 
-    return ItemsNeeded;
+    return itemsNeeded;
 }
 
 export function getSuggestedList() {
-    const { ItemsSuggested } = getUser();
+    const { itemsSuggested } = getUser();
 
-    return ItemsSuggested;
+    return itemsSuggested;
 }
 
 export function setEssentials(essentialItems) {
     const user = getUser();
 
-    user.ItemsNeeded = essentialItems;
+    user.itemsNeeded = essentialItems;
 
     setUser(user);
 } 
+
 export function setSuggested(suggestedItems) {
     const user = getUser();
 
-    user.ItemsSuggested = suggestedItems;
+    user.itemsSuggested = suggestedItems;
 
     setUser(user);
 } 

@@ -16,8 +16,10 @@
     // Salary Range* (dropdown)
     // Emergency funds (dropdown)
 
-import { setUser } from '../universal/local-storage-utils.js';
+import { setUser, setEssentials, setSuggested, getUser } from '../universal/local-storage-utils.js';
 import userCreate from './usercreate.js';
+import { neededItems, suggestedItems } from '../universal/data.js';
+import { needsToRender } from './form-utils.js';
 
 const form = document.getElementById('user-form');
 
@@ -26,9 +28,24 @@ form.addEventListener('submit', (e) => {
     const data = new FormData(form);
     const user = userCreate(data);
     
-
- 
     setUser(user);
+
+    //set lists
+    setEssentials(neededItems);
+    setSuggested(suggestedItems);
+
+    const userWithLists = getUser();
+    const possibleItems = userWithLists.tOrF;
+    possibleItems.forEach(({ id, toggle }) => {
+        if (toggle === 'on') {
+            needsToRender(id);
+        }
+    });
+    
+    //add up total water needed
+    //add up total food needed
+
+   
 
     window.location.href = '../preppy-page/index.html';
 });

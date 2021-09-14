@@ -206,8 +206,8 @@ export const suggestedItems = [
     {
         id: 118,
         name: 'games',
-        render: false,
-        description: 'Books, games, puzzles, stuffies or other activities for children',       
+        render: true,
+        description: 'Books, games, puzzles, or other activities',       
     }    
     // add transportation
 ];
