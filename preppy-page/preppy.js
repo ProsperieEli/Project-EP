@@ -1,4 +1,4 @@
-import { getEssentialsList, getSuggestedList, getUser } from '../universal/local-storage-utils.js';
+import { getEssentialsList, getSuggestedList } from '../universal/local-storage-utils.js';
 
 /* eslint-disable no-undef */
 const essentialsUL = document.getElementById('essential-ul');
@@ -6,28 +6,50 @@ const essentialH1 = document.getElementById('essentialh1');
 const suggestedUL = document.getElementById('suggested-ul');
 const suggestedH1 = document.getElementById('suggestedh1');
 
-const user = getUser();
-const essentialItems = getEssentialsList();
-const suggestedItems = getSuggestedList();
+const essentialItemsList = getEssentialsList();
+const suggestedItemsList = getSuggestedList();
+
+renderEssentialsNeeded(essentialItemsList);
+renderSuggestedNeeded(suggestedItemsList);
 
 
 function renderEssentialsNeeded(essentialItems){
     essentialsUL.innerHTML = '';
 
     for (let item of essentialItems) {
+
         const listItemEl = document.createElement('li');
         const listItem = document.createElement('p');
         
         listItemEl.classList.add('list-itemEl');
         listItem.classList.add('list-item');
 
-        listItem.textContent = item.itemsNeeded
+        listItem.textContent = item.itemsNeeded;
+
+        essentialsUL.append(essentialH1, listItemEl, listItem);
     }
     
 }
 
-function renderSuggestedNeeded(){
-    const suggestedUL = document.createElement('ul');
+function renderSuggestedNeeded(suggestedItems){
+    suggestedUL.innerHTML = '';
+
+    for (let item of suggestedItems) {
+
+        if (item.render) {
+            const listItemEl = document.createElement('li');
+            const listItem = document.createElement('p');
+        
+            listItemEl.classList.add('list-itemEl');
+            listItem.classList.add('list-item');
+
+            listItem.textContent = item.itemsNeeded;
+
+            suggestedUL.append(suggestedH1, listItemEl, listItem);
+        } else {
+            alert('nothing to render');
+        }
+    }
 }
 
 // - add completed: false property to each item
