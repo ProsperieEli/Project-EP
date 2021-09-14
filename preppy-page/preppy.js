@@ -13,6 +13,8 @@ renderEssentialsNeeded(essentialItemsList);
 renderSuggestedNeeded(suggestedItemsList);
 
 
+
+
 function renderEssentialsNeeded(essentialItems){
     essentialsUL.innerHTML = '';
 
@@ -27,6 +29,15 @@ function renderEssentialsNeeded(essentialItems){
         listItem.textContent = item.itemsNeeded;
 
         essentialsUL.append(essentialH1, listItemEl, listItem);
+
+        listItemEl.addEventListener('click', () => {
+            itemCompleted(todo.id);
+            toDoItem.classList.add('done');
+            
+        });
+        if (todo.completed === 'true') {
+            toDoItem.classList.add('done');
+        }
     }
     
 }
