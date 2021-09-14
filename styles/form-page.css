@@ -3,8 +3,24 @@ form {
     margin: 10px;
     display: flex;
     flex-direction: column;
+    width: fit-content;
 }
 
 form > * {
     margin: 5px;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#sub-btn {
+
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background-color: black;
+    width: 60px;
+    height: 30px;
 }
