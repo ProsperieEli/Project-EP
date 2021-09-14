@@ -8,8 +8,8 @@ function userCreate(form){
         Pets: form.get('pets'),
         Savings: form.get('emergency-funds'),
         HaveTransport: form.get('havetransport'),
-        PrescriptionMed: form.get('prescriptionmed'),
-        PrescriptionEye: form.get('prescriptioneye'),
+        PrescriptionMed: form.get('prescription'),
+        PrescriptionEye: form.get('eyewear'),
         Assets: form.get('assets'),
     };
     return userinput;
