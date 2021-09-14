@@ -24,10 +24,17 @@ export function getSuggestedList() {
     return ItemsSuggested;
 }
 
-export function setToDoList(itemsToDo) {
+export function setEssentials(essentialItems) {
     const user = getUser();
 
-    user.itemsToDo = itemsToDo;
+    user.ItemsNeeded = essentialItems;
+
+    setUser(user);
+} 
+export function setSuggested(suggestedItems) {
+    const user = getUser();
+
+    user.ItemsSuggested = suggestedItems;
 
     setUser(user);
 } 
