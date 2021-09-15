@@ -59,3 +59,8 @@ export function addCompletedProp() {
     setSuggested(suggested);
 
 }
+
+export function calculateGoodsNeeded() {
+
+}
+
