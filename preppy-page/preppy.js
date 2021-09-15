@@ -1,4 +1,5 @@
-import { getEssentialsList, getSuggestedList, setEssentials, setSuggested } from '../universal/local-storage-utils.js';
+import userCreate from '../form-page/usercreate.js';
+import { getEssentialsList, getSuggestedList, getUser, setEssentials, setSuggested } from '../universal/local-storage-utils.js';
 
 /* eslint-disable no-undef */
 const essentialsUL = document.getElementById('essential-ul');
@@ -8,13 +9,6 @@ const suggestedUL = document.getElementById('suggested-ul');
 const essentialItemsList = getEssentialsList();
 const suggestedItemsList = getSuggestedList();
 
-//Ticket 2
-// calculate amount of food and water
-// take in total household # and multiply by (amount: 1gallon/day for numDays: 3 days,  3 meals/day for 3 days, 1 mask/person, 1 sleeping bag/person, 1 extra set of clothing per person)
-// allData.forEach(item => if(item.amount))
-// if !numDays, numDays = 1
-// function calcAmt(numNeeded, howManyDays)
-// push a new item.description 'your household needs 12 gallons of water'
 
 renderEssentialsNeeded(essentialItemsList);
 renderSuggestedNeeded(suggestedItemsList);
@@ -25,6 +19,7 @@ function renderEssentialsNeeded(essentialItems){
 
     for (let item of essentialItems) {
 
+        const user = getUser();
         const listItemEl = document.createElement('li');
         const listItem = document.createElement('p');
         
@@ -34,9 +29,14 @@ function renderEssentialsNeeded(essentialItems){
         if (item.completed === true){
             listItem.classList.add('completed-item');
         }
-
+        
         listItem.textContent = item.description;
-
+        //concat a sentence with a findbydescription/id function and add in backticks/literals for totalfamily, totalGoods of the id.name
+        //go in render function on prep page
+        if (item.amountPerPerson) {
+            const totalNeeded = (item.amountPerPerson * user.totalFamily) * item.numDays;
+            listItem.textContent = item.description + `You have ${user.totalFamily} members in your household. You will need ${totalNeeded} ${item.consumables} `;
+        }
         listItem.addEventListener('click', () => {
             // change to completed = true when item clicked (!user.completed) classList.toggle
             item.completed = (!item.completed); //toggle the completed state when an item is clicked
@@ -56,6 +56,7 @@ function renderSuggestedNeeded(suggestedItems){
     for (let item of suggestedItems) {
   
         if (item.render === true) {
+            const user = getUser();
             const listItemEl = document.createElement('li');
             const listItem = document.createElement('p');
         
@@ -65,8 +66,15 @@ function renderSuggestedNeeded(suggestedItems){
             if (item.completed === true){
                 listItem.classList.add('completed-item');
             }
+        //concat a sentence with a findbydescription/id function and add in backticks/literals for totalfamily, totalGoods of the id.name
+        //go in render function on prep page
 
             listItem.textContent = item.description;
+
+            if (item.amountPerPerson) {
+                const totalSuggested = (item.amountPerPerson * user.totalFamily) * item.numDays;
+                listItem.textContent = item.description + `You have ${user.totalFamily} members in your household. You will need ${totalSuggested} ${item.consumables} `;
+            }
 
             listItem.addEventListener('click', () => {
                 // change to completed = true when item clicked (!user.completed) classList.toggle
