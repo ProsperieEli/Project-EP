@@ -28,16 +28,15 @@ function renderEssentialsNeeded(essentialItems){
 
         listItem.textContent = item.description;
 
+        listItem.addEventListener('click', () => {
+            
+            alert('clicked');
+            
+        });
+        
         essentialsUL.append(listItemEl, listItem);
 
-        // listItemEl.addEventListener('click', () => {
-        //     itemCompleted(todo.id);
-        //     toDoItem.classList.add('done');
-            
-        // });
-        // if (todo.completed === 'true') {
-        //     toDoItem.classList.add('done');
-        // }
+        
     }
     
 }
