@@ -293,3 +293,25 @@ const myChart = new Chart(ctx,
         }
     });
  
+    
+
+import { renderEssentialsNeeded, renderSuggestedNeeded } from '../universal/render.js';
+
+const essentials = getEssentialsList();
+const suggested = getSuggestedList();
+const essentialsRemaining = essentials
+    .filter(item => {
+        if (item.render === true && item.completed === false) {
+            return item;
+        }
+    });
+
+const suggestedRemaining = suggested
+    .filter(el => {
+        if (el.render === true && el.completed === false) {
+            return el;
+        }
+    });
+
+renderEssentialsNeeded(essentialsRemaining);
+renderSuggestedNeeded(suggestedRemaining);
