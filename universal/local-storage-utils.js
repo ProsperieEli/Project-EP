@@ -39,3 +39,20 @@ export function setSuggested(suggestedItems) {
 
     setUser(user);
 } 
+
+export function addCompletedProp() {
+    const essentials = getEssentialsList();
+    const suggested = getSuggestedList();
+
+    essentials.forEach(item => {
+        item.completed = false;
+    });
+
+    suggested.forEach(el => {
+        el.completed = false;
+    });
+
+    setEssentials(essentials);
+    setSuggested(suggested);
+
+}
