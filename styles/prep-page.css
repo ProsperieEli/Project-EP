@@ -22,6 +22,11 @@ li:first-child, last-child {
 }
 
 .list-item:hover {
-    transform: scale(105%, 105%);
+    font-size: 115%;
     cursor: pointer;
+}
+
+.completed-item {
+    text-decoration: line-through;
+    color: darkgray;
 }
