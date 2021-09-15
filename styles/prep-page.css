@@ -1,0 +1,27 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 5px;
+    padding: 5px;
+
+}
+
+.list-itemEl {
+    list-style: none;
+    margin: 2px;
+    padding: 3.25px;
+    border-top: 1px solid lightgray;
+}
+
+li:first-child, last-child {
+    border: none;
+    }
+
+.list-item {
+    transition: all .25s ease-in-out;
+}
+
+.list-item:hover {
+    transform: scale(105%, 105%);
+    cursor: pointer;
+}
