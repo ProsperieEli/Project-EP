@@ -40,6 +40,9 @@ export function setSuggested(suggestedItems) {
     setUser(user);
 } 
 
+//*universal for function, call func on form-page* add completed = false to all essential and suggested
+//*preppy* eventlistener: change to completed = true when item clicked (!user.completed) classList.toggle
+
 export function addCompletedProp() {
     const essentials = getEssentialsList();
     const suggested = getSuggestedList();

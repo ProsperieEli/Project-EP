@@ -1,4 +1,4 @@
-import { getEssentialsList, getSuggestedList } from '../universal/local-storage-utils.js';
+import { getEssentialsList, getSuggestedList, setEssentials, setSuggested } from '../universal/local-storage-utils.js';
 
 /* eslint-disable no-undef */
 const essentialsUL = document.getElementById('essential-ul');
@@ -7,10 +7,6 @@ const suggestedUL = document.getElementById('suggested-ul');
 
 const essentialItemsList = getEssentialsList();
 const suggestedItemsList = getSuggestedList();
-
-//Ticket 1
-//*universal for function, call func on form-page* add completed = false to all essential and suggested
-//*preppy* eventlistener: change to completed = true when item clicked (!user.completed) classList.toggle
 
 //Ticket 2
 // calculate amount of food and water
@@ -35,17 +31,21 @@ function renderEssentialsNeeded(essentialItems){
         listItemEl.classList.add('list-itemEl');
         listItem.classList.add('list-item');
 
+        if (item.completed === true){
+            listItem.classList.add('completed-item');
+        }
+
         listItem.textContent = item.description;
 
         listItem.addEventListener('click', () => {
-            
-            alert('clicked');
-            
+            // change to completed = true when item clicked (!user.completed) classList.toggle
+            item.completed = (!item.completed); //toggle the completed state when an item is clicked
+            setEssentials(essentialItems); //set the essential list to local storage now that it's updated
+            renderEssentialsNeeded(essentialItems); //show what's been marked as completed on the page
         });
-        
-        essentialsUL.append(listItemEl, listItem);
 
-        
+        listItemEl.append(listItem);
+        essentialsUL.append(listItemEl);
     }
     
 }
@@ -62,9 +62,21 @@ function renderSuggestedNeeded(suggestedItems){
             listItemEl.classList.add('list-itemEl');
             listItem.classList.add('list-item');
 
+            if (item.completed === true){
+                listItem.classList.add('completed-item');
+            }
+
             listItem.textContent = item.description;
 
-            suggestedUL.append(listItemEl, listItem);
+            listItem.addEventListener('click', () => {
+                // change to completed = true when item clicked (!user.completed) classList.toggle
+                item.completed = (!item.completed); //toggle the completed state when an item is clicked
+                setSuggested(suggestedItems); //set the suggested list to local storage now that it's updated
+                renderSuggestedNeeded(suggestedItems); //show what's been marked as completed on the page
+            });
+
+            listItemEl.append(listItem);
+            suggestedUL.append(listItemEl);
         } 
     }
 }
