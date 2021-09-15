@@ -2,14 +2,12 @@ import { getEssentialsList, getSuggestedList } from '../universal/local-storage-
 
 /* eslint-disable no-undef */
 const essentialsUL = document.getElementById('essential-ul');
-const essentialH1 = document.getElementById('essentialh1');
 const suggestedUL = document.getElementById('suggested-ul');
-const suggestedH1 = document.getElementById('suggestedh1');
+
 
 const essentialItemsList = getEssentialsList();
 const suggestedItemsList = getSuggestedList();
 
-console.log(essentialItemsList);
 
 renderEssentialsNeeded(essentialItemsList);
 renderSuggestedNeeded(suggestedItemsList);
@@ -28,9 +26,9 @@ function renderEssentialsNeeded(essentialItems){
         listItemEl.classList.add('list-itemEl');
         listItem.classList.add('list-item');
 
-        listItem.textContent = item.itemsNeeded;
+        listItem.textContent = item.description;
 
-        essentialsUL.append(essentialH1, listItemEl, listItem);
+        essentialsUL.append(listItemEl, listItem);
 
         // listItemEl.addEventListener('click', () => {
         //     itemCompleted(todo.id);
@@ -48,20 +46,18 @@ function renderSuggestedNeeded(suggestedItems){
     suggestedUL.innerHTML = '';
 
     for (let item of suggestedItems) {
-
-        if (item.render) {
+  
+        if (item.render === true) {
             const listItemEl = document.createElement('li');
             const listItem = document.createElement('p');
         
             listItemEl.classList.add('list-itemEl');
             listItem.classList.add('list-item');
 
-            listItem.textContent = item.itemsNeeded;
+            listItem.textContent = item.description;
 
-            suggestedUL.append(suggestedH1, listItemEl, listItem);
-        } else {
-            alert('nothing to render');
-        }
+            suggestedUL.append(listItemEl, listItem);
+        } 
     }
 }
 
@@ -80,7 +76,7 @@ function renderSuggestedNeeded(suggestedItems){
 // eslint-disable-next-line no-unused-vars
 const config = {
     type: 'line',
-    data: data,
+    data: essentialItemsList,
     options: {
         animation: {
             duration: 2000,
@@ -120,21 +116,21 @@ const progress = document.getElementById('animationProgress');
 const DATA_COUNT = 7;
 const NUMBER_CFG = { count: DATA_COUNT, min: -100, max: 100 };
 
-const labels = Utils.months({ count: 7 });
-const data = {
-    labels: labels,
-    datasets: [
-        {
-            label: 'Dataset 1',
-            data: Utils.numbers(NUMBER_CFG),
-            borderColor: Utils.CHART_COLORS.red,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red, 0.5),
-        },
-        {
-            label: 'Dataset 2',
-            data: Utils.numbers(NUMBER_CFG),
-            borderColor: Utils.CHART_COLORS.blue,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.blue, 0.5),
-        }
-    ]
-};
+// const labels = Utils.months({ count: 7 });
+// const data = {
+//     labels: labels,
+//     datasets: [
+//         {
+//             label: 'Dataset 1',
+//             data: Utils.numbers(NUMBER_CFG),
+//             borderColor: Utils.CHART_COLORS.red,
+//             backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red, 0.5),
+//         },
+//         {
+//             label: 'Dataset 2',
+//             data: Utils.numbers(NUMBER_CFG),
+//             borderColor: Utils.CHART_COLORS.blue,
+//             backgroundColor: Utils.transparentize(Utils.CHART_COLORS.blue, 0.5),
+//         }
+//     ]
+// };
