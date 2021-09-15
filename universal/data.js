@@ -1,3 +1,4 @@
+
 export const user = {
     Name: '',
     YoungChildren: false,
@@ -18,16 +19,23 @@ export const user = {
     // location
 };
 
+let totalMembers = 1;
+let totalGoods = 1;
+
 export const neededItems = [{
     id: 1,
     name: 'water',
     render: true,
-    description: 'Water',
+    description: `For your household of ${totalMembers}, make sure to have ${this.amountPerPerson} gallons of water per person for up to ${this.numDays} days(which is ${totalGoods} gallons total)`,
+    amountPerPerson: 1,
+    numDays: 3
 }, {
     id: 2,
     name: 'food',
     render: true,
-    description: 'Food'        
+    description: `For your household of ${totalMembers}, make sure to have ${this.amountPerPerson} meals per person for up to ${this.numDays} days(which is ${totalGoods} meals total)`,
+    amountPerPerson: 3,
+    numDays: 3       
 }, {
     id: 3,
     name: 'radio',
@@ -47,7 +55,8 @@ export const neededItems = [{
     id: 6,
     name: 'shoes',
     render: true,
-    description: 'Pair of Shoes'        
+    description: 'Pair of Shoes',
+    amountPerPerson: 1,       
 }, {
     id: 7,
     name: 'whistle',
@@ -62,7 +71,8 @@ export const neededItems = [{
     id: 9,
     name: 'dust-mask',
     render: true,
-    description: 'Dust Mask'        
+    description: `For your household of ${totalMembers}, make sure to have ${this.amountPerPerson} dust mask per person(which is ${totalGoods} total)`,
+    amountPerPerson: 1,        
 }, {
     id: 10,
     name: 'sheeting',
@@ -117,13 +127,14 @@ export const suggestedItems = [
         id: 103,
         name: 'transportation',
         render: false,
-        description: 'links to additional transportion'        
+        description: 'links to additional transportation'        
     },
     {
         id: 104,
         name: 'masks',
         render: true,
-        description: 'Masks (for everyone ages 2 and above)'        
+        description: `For your household of ${totalMembers}, make sure to have 1 mask (for everyone ages 2 and above)(which is ${totalGoods} total) `,
+        amountPerPerson: 1,        
     },
     {
         id: 105,
@@ -171,7 +182,9 @@ export const suggestedItems = [
         id: 112,
         name: 'clothing',
         render: true,
-        description: 'Complete change of clothing appropriate for your climate'        
+        // eslint-disable-next-line no-undef
+        description: `For your household of ${calculated}, make sure to have 1 change of clothing per person appropriate for your climate(which is ${calculated} sets total)`,
+        amountPerPerson: 1        
     },
     {
         id: 113,
