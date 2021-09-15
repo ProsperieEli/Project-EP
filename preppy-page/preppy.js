@@ -88,7 +88,11 @@ function renderSuggestedNeeded(suggestedItems){
         } 
     }
 }
+const getpiebutton = document.getElementById('go-to-results');
 
+getpiebutton.addEventListener('click', () => {
+    window.location.href = '../results/index.html';
+});
 // - add completed: false property to each item
 // - render each essential item
 // - render each suggested
