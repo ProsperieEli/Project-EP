@@ -57,5 +57,4 @@ export function addCompletedProp() {
 
     setEssentials(essentials);
     setSuggested(suggested);
-
 }
