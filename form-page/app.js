@@ -17,7 +17,7 @@
     // Emergency funds (dropdown)
 
 import { setUser, setEssentials, setSuggested, getUser, addCompletedProp } from '../universal/local-storage-utils.js';
-import userCreate from './usercreate.js';
+import userCreate, { calculateGoods } from './usercreate.js';
 import { neededItems, suggestedItems } from '../universal/data.js';
 import { needsToRender } from './form-utils.js';
 
@@ -45,13 +45,12 @@ form.addEventListener('submit', (e) => {
             needsToRender(id);
         }
     });
-    
-    //add up total water needed
-    //add up total food needed
+    let neededItemTotal = calculateGoods(neededItems);
+    let suggestedItemTotal = calculateGoods(suggestedItems);
 
-   
+    window.location.href = './preppy-page/index.html';
 
-    window.location.href = '../preppy-page/index.html';
+    return neededItemTotal, suggestedItemTotal;
 });
 
 // submit

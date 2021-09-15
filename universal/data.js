@@ -1,41 +1,44 @@
 
-export const user = {
-    Name: '',
-    YoungChildren: false,
-    Dependents: 0,
-    Adults: 0,
-    Seniors: 0,
-    // HouseholdTotal: (user.Dependents),
-    Salary: 0,
-    Pets: false,
-    Savings: 0,
-    HaveTransport: false,
-    PrescriptionMed: false,
-    PrescriptionEye: false,
-    Assets: false,
-    ItemsNeeded: [],
-    ItemsSuggested: [],
-    // stretch
-    // location
-};
+//should we delete?
+// export const user = {
+//     Name: '',
+//     YoungChildren: false,
+//     Dependents: 0,
+//     Adults: 0,
+//     Seniors: 0,
+//     // HouseholdTotal: (user.Dependents),
+//     Salary: 0,
+//     Pets: false,
+//     Savings: 0,
+//     HaveTransport: false,
+//     PrescriptionMed: false,
+//     PrescriptionEye: false,
+//     Assets: false,
+//     ItemsNeeded: [],
+//     ItemsSuggested: [],
+//     // stretch
+//     // location
+// };
 
-let totalMembers = 1;
-let totalGoods = 1;
+//change all data to generic sentence
 
 export const neededItems = [{
     id: 1,
     name: 'water',
     render: true,
-    description: `For your household of ${totalMembers}, make sure to have ${this.amountPerPerson} gallons of water per person for up to ${this.numDays} days(which is ${totalGoods} gallons total)`,
+    description: `Have 1 gallon of water per person on reserve for up to 3 days`,
     amountPerPerson: 1,
-    numDays: 3
+    numDays: 3,
+    consumables: `gallons`,
+
 }, {
     id: 2,
     name: 'food',
     render: true,
-    description: `For your household of ${totalMembers}, make sure to have ${this.amountPerPerson} meals per person for up to ${this.numDays} days(which is ${totalGoods} meals total)`,
+    description: `Have 3 meals per person for up to 3 days`,
     amountPerPerson: 3,
-    numDays: 3       
+    numDays: 3,
+    consumables: `meals`,       
 }, {
     id: 3,
     name: 'radio',
@@ -55,8 +58,7 @@ export const neededItems = [{
     id: 6,
     name: 'shoes',
     render: true,
-    description: 'Pair of Shoes',
-    amountPerPerson: 1,       
+    description: 'Pair of Shoes',     
 }, {
     id: 7,
     name: 'whistle',
@@ -71,8 +73,9 @@ export const neededItems = [{
     id: 9,
     name: 'dust-mask',
     render: true,
-    description: `For your household of ${totalMembers}, make sure to have ${this.amountPerPerson} dust mask per person(which is ${totalGoods} total)`,
-    amountPerPerson: 1,        
+    description: `Have 1 dust mask per person`,
+    amountPerPerson: 1,
+    consumables: `dust masks`,        
 }, {
     id: 10,
     name: 'sheeting',
@@ -131,10 +134,11 @@ export const suggestedItems = [
     },
     {
         id: 104,
-        name: 'masks',
+        name: 'mask',
         render: true,
-        description: `For your household of ${totalMembers}, make sure to have 1 mask (for everyone ages 2 and above)(which is ${totalGoods} total) `,
-        amountPerPerson: 1,        
+        description: `Have 1 mask per person (for everyone ages 2 and above)`,
+        amountPerPerson: 1,
+        consumables: `masks`,        
     },
     {
         id: 105,
@@ -182,9 +186,9 @@ export const suggestedItems = [
         id: 112,
         name: 'clothing',
         render: true,
-        // eslint-disable-next-line no-undef
-        description: `For your household of ${calculated}, make sure to have 1 change of clothing per person appropriate for your climate(which is ${calculated} sets total)`,
-        amountPerPerson: 1        
+        description: `Have 1 change of clothing per person appropriate for your climate`,
+        amountPerPerson: 1,
+        consumables: `sets`,        
     },
     {
         id: 113,
