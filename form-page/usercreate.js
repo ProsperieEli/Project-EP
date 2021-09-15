@@ -1,10 +1,14 @@
 
 function userCreate(form){
+    const dependents = Number(form.get('kids'));
+    const adults = Number(form.get('adults'));
+    const seniors = Number(form.get('seniors'));
     const userinput = {
 
-        dependents: Number(form.get('kids')),
-        adults: Number(form.get('adults')),
-        seniors: Number(form.get('seniors')),
+        dependents,
+        adults,
+        seniors,
+        totalFamily: dependents + adults + seniors,
         salary: form.get('salary'),
         savings: form.get('emergency-funds'),
         tOrF : [
@@ -18,6 +22,7 @@ function userCreate(form){
         itemsNeeded: [],
         itemsSuggested: []
     };
+
     return userinput;
 }
 

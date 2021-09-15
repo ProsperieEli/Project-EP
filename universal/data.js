@@ -1,4 +1,4 @@
-
+//should we delete?
 export const user = {
     Name: '',
     YoungChildren: false,
@@ -26,14 +26,15 @@ export const neededItems = [{
     id: 1,
     name: 'water',
     render: true,
-    description: `For your household of ${totalMembers}, make sure to have ${this.amountPerPerson} gallons of water per person for up to ${this.numDays} days(which is ${totalGoods} gallons total)`,
+    description: `For your household of ${totalMembers}, make sure to have ${''} gallons of water per person for up to ${''} days(which is ${totalGoods} gallons total)`,
     amountPerPerson: 1,
     numDays: 3
+
 }, {
     id: 2,
     name: 'food',
     render: true,
-    description: `For your household of ${totalMembers}, make sure to have ${this.amountPerPerson} meals per person for up to ${this.numDays} days(which is ${totalGoods} meals total)`,
+    description: `For your household of ${totalMembers}, make sure to have ${''} meals per person for up to ${''} days(which is ${totalGoods} meals total)`,
     amountPerPerson: 3,
     numDays: 3       
 }, {
@@ -71,7 +72,7 @@ export const neededItems = [{
     id: 9,
     name: 'dust-mask',
     render: true,
-    description: `For your household of ${totalMembers}, make sure to have ${this.amountPerPerson} dust mask per person(which is ${totalGoods} total)`,
+    description: `For your household of ${totalMembers}, make sure to have ${''} dust mask per person(which is ${totalGoods} total)`,
     amountPerPerson: 1,        
 }, {
     id: 10,
@@ -183,7 +184,7 @@ export const suggestedItems = [
         name: 'clothing',
         render: true,
         // eslint-disable-next-line no-undef
-        description: `For your household of ${calculated}, make sure to have 1 change of clothing per person appropriate for your climate(which is ${calculated} sets total)`,
+        description: `For your household of ${''}, make sure to have 1 change of clothing per person appropriate for your climate(which is ${''} sets total)`,
         amountPerPerson: 1        
     },
     {
