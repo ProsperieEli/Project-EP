@@ -30,3 +30,12 @@ li:first-child, last-child {
     text-decoration: line-through;
     color: darkgray;
 }
+.buttonpie{
+    display:flex;
+    position:relative;
+    right:-485px;
+    margin-bottom: 10px;;
+    cursor:pointer;
+    border-radius: 40%;
+    padding:8px;
+}
