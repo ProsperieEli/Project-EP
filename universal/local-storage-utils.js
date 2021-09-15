@@ -60,7 +60,10 @@ export function addCompletedProp() {
 
 }
 
-export function calculateGoodsNeeded() {
-
-}
-
+//Ticket 2
+// calculate amount of food and water
+// take in total household # and multiply by (amount: 1gallon/day for numDays: 3 days,  3 meals/day for 3 days, 1 mask/person, 1 sleeping bag/person, 1 extra set of clothing per person)
+// allData.forEach(item => if(item.amount))
+// if !numDays, numDays = 1
+// function calcAmt(numNeeded, howManyDays)
+// push a new item.description 'your household needs 12 gallons of water'
