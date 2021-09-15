@@ -22,6 +22,10 @@ header {
     align-items: center;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
 .left-header {
     color: white;
     font-size: 40px;

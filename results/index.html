@@ -7,56 +7,62 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/results-page.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <div class="gutter-right logo">
-
-        </div>
+            <h1 class="left-header">Results</h1>
+            <img class="logo right-header" src="../assets/EP.png" alt="emergency preparedness logo">
     </header>
     <main>
 
-        <div id="complete-pie">
+        <div id="complete-pie" class="flex-center">
             <!--Pie chart div-->
+            pie chart goes here
         </div>
 
-        <div id="explanation-div">
-            <h2>Why is this information useful?</h2>
+        <section class="side-by-side">
+            <div id="explanation-div" class="frosted-background">
+                <h2>Why is this information useful?</h2>
+    
+                <p>Knowing what items to have in the event of a disaster is the same as knowing what <br>
+                    tools to have before working on a project. Being caught off-guard, or lacking in a <br>
+                    particular item could lead to serious consequences. That is why we wish to urge all to <br>
+                    ensure that they have 100% of the essential items, and at minimum 80% of the needed <br>
+                    items. These items are the most recommended to aid in the event of a disaster. <br>
+                    Below you can check how many items you have, and what you are missing.
+                </p>
+            </div>
+            <div id="storing-caring" class="frosted-background">
+                <h2>Storing & Caring</h2>
+                <p>You now have your emergency kit made and ready for use. That's awesome! Only, one <br>
+                    issue: there isn't a situation where it is currently needed. Hopefully, there should<br>
+                    <strong>never</strong> be a situation you find yourself in where you'll need it, but disasters <br>
+                    can always occur. Which is why you also need to be familiar with how to care for and store these <br>
+                    useful kits in preparation for <em>if</em> the time ever does arise.
+                </p>
+            </div>
+        </section>
 
-            <p>Knowing what items to have in the event of a disaster is the same as knowing what <br>
-                tools to have before working on a project. Being caught off-guard, or lacking in a <br>
-                particular item could lead to serious consequences. That is why we wish to urge all to <br>
-                ensure that they have 100% of the essential items, and at minimum 80% of the needed <br>
-                items. These items are the most recommended to aid in the event of a disaster. <br>
-                Below you can check how many items you have, and what you are missing.
-            </p>
-        </div>
-        <div id="storing-caring">
-            <h2>Storing & Caring</h2>
-            <p>You now have your emergency kit made and ready for use. That's awesome! Only, one <br>
-                issue: there isn't a situation where it is currently needed. Hopefully, there should<br>
-                <strong>never</strong> be a situation you find yourself in where you'll need it, but disasters <br>
-                can always occur. Which is why you also need to be familiar with how to care for and store these <br>
-                useful kits in preparation for <em>if</em> the time ever does arise.
-            </p>
-        </div>
-        <div>
-            <h2>Essential items still needed :</h2>
-            <ul id="essential-ul">
+        <section class="side-by-side">
+            <div class="frosted-background">
+                <h2>Essential items still needed :</h2>
+                <ul id="essential-ul">
+    
+                </ul>
+            </div>
+            <div class="frosted-background">
+                <h2>Suggested items still needed :</h2>
+                <ul id="suggested-ul">
+    
+                </ul>
+            </div>
+        </section>
 
-            </ul>
-        </div>
-        <div>
-            <h2>Suggested items still needed :</h2>
-            <ul id="suggested-ul">
-
-            </ul>
-        </div>
-
-        <div>
-            <p>
+        <section class="flex-center">
+            <p class="frosted-background">
 
                 The items you've put together in this emergency kit are items that could save your, and another <br>
                 person's life one day. So keeping each item in top condition should be a top concern. Keeping no food
@@ -73,33 +79,25 @@
                 means you <br>
                 should have this kit somewhere accessible at the drop of a hat.
             </p>
-        </div>
-
-        <div>
-            <h1>Disclaimer</h1>
-            <p>
-                Please remember. While the people who created this website cares deeply for your wellbeing, none of the
-                parties involved <br>
-                are licensed Emergical Responders. We can offer support in terms of what we believe would be necessities
-                and helpful <br>
-                items. However if a real emergency does occure, please do contact your local and federal emergency
-                responders.
-            </p>
-            <a href="https://www.ena.org/practice-resources/natural-disaster-resources">Click here for Federal Natural
-                Disaster Resources.</a>
-        </div>
-
-
-
-
-
-
-
         </section>
-    </main>
-    <footer>
 
-    </footer>
+        <section class="flex-center">
+            <div class="frosted-background flex-column">
+                <h1>Disclaimer</h1>
+                <p>
+                    Please remember. While the people who created this website cares deeply for your wellbeing, none of the
+                    parties involved <br>
+                    are licensed Emergical Responders. We can offer support in terms of what we believe would be necessities
+                    and helpful <br>
+                    items. However if a real emergency does occure, please do contact your local and federal emergency
+                    responders.
+                </p>
+                <a href="https://www.ena.org/practice-resources/natural-disaster-resources">Click here for Federal Natural
+                    Disaster Resources.</a>
+            </div>
+        </section>
+
+    </main>
 
     <script type="module" src="./results.js"></script>
 </body>
