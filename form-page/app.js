@@ -29,7 +29,7 @@ form.addEventListener('submit', (e) => {
     const user = userCreate(data);
     
     setUser(user);
-
+    console.log(user);
     //set lists
     setEssentials(neededItems);
     setSuggested(suggestedItems);
@@ -48,10 +48,10 @@ form.addEventListener('submit', (e) => {
     
     //add up total water needed
     //add up total food needed
-
+    // const familyTotal = calculateFamilyTotal();
    
-
-    window.location.href = '../preppy-page/index.html';
+     
+    // window.location.href = '../preppy-page/index.html';
 });
 
 // submit
