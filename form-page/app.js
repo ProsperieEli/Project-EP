@@ -16,7 +16,7 @@
     // Salary Range* (dropdown)
     // Emergency funds (dropdown)
 
-import { setUser, setEssentials, setSuggested, getUser } from '../universal/local-storage-utils.js';
+import { setUser, setEssentials, setSuggested, getUser, addCompletedProp } from '../universal/local-storage-utils.js';
 import userCreate from './usercreate.js';
 import { neededItems, suggestedItems } from '../universal/data.js';
 import { needsToRender } from './form-utils.js';
@@ -34,6 +34,10 @@ form.addEventListener('submit', (e) => {
     setEssentials(neededItems);
     setSuggested(suggestedItems);
 
+    //add a item.completed property to each item
+    addCompletedProp();
+
+    //change render to true based on user input
     const userWithLists = getUser();
     const possibleItems = userWithLists.tOrF;
     possibleItems.forEach(({ id, toggle }) => {
