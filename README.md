@@ -22,7 +22,7 @@ https://www.electricgeneratorsdirect.com/stories/6-How-to-Safely-Stockpile-Emerg
 https://www.cdc.gov/aging/pdf/disaster_planning_tips.pdf
 https://www.ready.gov/financial-preparedness
 https://www.ready.gov/sites/default/files/2020-03/ready_emergency-financial-first-aid-toolkit.pdf
-
+https://www.cdc.gov/aging/pdf/disaster_planning_tips.pdf
 
 *Preppy Page Plan*
 -------HTML-------
