@@ -17,6 +17,13 @@ Photo by <a href="https://unsplash.com/@nikolasnoonan?utm_source=unsplash&utm_me
 ## Results Index: 
 https://en.wikipedia.org/wiki/List_of_natural_disasters_in_the_United_States
 
+## Prep List: 
+https://www.electricgeneratorsdirect.com/stories/6-How-to-Safely-Stockpile-Emergency-Gasoline.html
+https://www.cdc.gov/aging/pdf/disaster_planning_tips.pdf
+https://www.ready.gov/financial-preparedness
+https://www.ready.gov/sites/default/files/2020-03/ready_emergency-financial-first-aid-toolkit.pdf
+
+
 *Preppy Page Plan*
 -------HTML-------
 - two progress bars at top (fixed to page)

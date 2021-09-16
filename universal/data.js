@@ -123,9 +123,9 @@ export const suggestedItems = [
     },
     {
         id: 103,
-        name: 'transportation',
+        name: 'generator',
         render: false,
-        description: 'links to additional transportation',
+        description: `In the event of a power outage have at least 25-30 gallons of gas on-hand for your generator. To store safely, be sure to invest in a fuel tank with a siphon and make sure to add a couple ounces of fuel stabilizer per 5-gallons prior to filling`,
         link: 'https://www.amazon.com/Blue-Gallon-Water-Storage-WaterPrepared/dp/B0785BHYFG/ref=sr_1_4?dchild=1&keywords=water+storage&qid=1631822972&sr=8-4'        
     },
     {
@@ -164,7 +164,7 @@ export const suggestedItems = [
         id: 108,
         name: 'pet',
         render: false,
-        description: 'Pet food and extra water for your pet',
+        description: '1 month supply of pet food, and 1 gallon of water on reserve (per pet)',
         link: 'https://www.amazon.com/Blue-Gallon-Water-Storage-WaterPrepared/dp/B0785BHYFG/ref=sr_1_4?dchild=1&keywords=water+storage&qid=1631822972&sr=8-4'        
     },
     {
@@ -178,14 +178,17 @@ export const suggestedItems = [
         id: 110,
         name: 'documents',
         render: true,
-        description: `Important family documents such as copies of insurance policies, identification and bank account records saved electronically or in a waterproof, portable container`,
+        description: `Copies of all vital records (stored digitally, in a waterproof/portable container, or both). Vital records include: insurance policies, investment records, pay stubs, benefits records, tax returns, wills, trusts and powers of attorney`,
         link: 'https://www.amazon.com/Blue-Gallon-Water-Storage-WaterPrepared/dp/B0785BHYFG/ref=sr_1_4?dchild=1&keywords=water+storage&qid=1631822972&sr=8-4'   
     },
     {
         id: 111,
         name: 'blankets',
         render: true,
-        description: 'Sleeping bag or warm blanket for each person',
+        description: 'Sleeping bag or warm blanket',
+        amountPerPerson: 1,
+        numDays: 1,
+        consumables: 'blankets',
         link: 'https://www.amazon.com/Blue-Gallon-Water-Storage-WaterPrepared/dp/B0785BHYFG/ref=sr_1_4?dchild=1&keywords=water+storage&qid=1631822972&sr=8-4'        
     },
     {
@@ -239,6 +242,39 @@ export const suggestedItems = [
         render: true,
         description: 'Books, games, puzzles, or other activities',
         link: 'https://www.amazon.com/Blue-Gallon-Water-Storage-WaterPrepared/dp/B0785BHYFG/ref=sr_1_4?dchild=1&keywords=water+storage&qid=1631822972&sr=8-4'       
+    },    
+    {
+        id: 119,
+        name: 'assets',
+        render: false,
+        description: 'Because you have insured assets, review each of your insurance policies to ensure that your assets are properly protected specifically in the event of a natural disaster',
+        link: 'https://www.amazon.com/Blue-Gallon-Water-Storage-WaterPrepared/dp/B0785BHYFG/ref=sr_1_4?dchild=1&keywords=water+storage&qid=1631822972&sr=8-4'       
+    },    
+    {
+        id: 120,
+        name: 'senior',
+        render: false,
+        description: `The U.S. Administration on Aging (AoA) recommends older adults and their families develop a family communication plan so that the whereabouts of each member is reported to a key person(s) during a disaster.`,
+        link: 'https://www.amazon.com/Blue-Gallon-Water-Storage-WaterPrepared/dp/B0785BHYFG/ref=sr_1_4?dchild=1&keywords=water+storage&qid=1631822972&sr=8-4'       
     }    
-    // add transportation (someone already marked 103 as transportation?)
+    
 ];
+
+// The U.S. Administration on Aging (AoA) says that, “although the exact nature of the emergency
+// cannot be predicted, there are preparations that apply to almost any kind of disaster.” AoA suggests that
+// older adults and their families:
+// 1) develop a family communication plan so that the whereabouts and well-being of every family
+// member is reported to a key person(s) during a disaster;
+// 2) plan how to keep informed of developments in the disaster situation by telephone, cell phone,
+// computer, radio, television, or newspaper;
+// 3) identify a meeting place away from home that is reasonably familiar and convenient for all family
+// members;
+// 4) maintain a supply of personal, health, and home supplies, including a two-week supply of
+// prescription medications, enough ready-to-eat food and water to last three days, first-aid supplies,
+// candles and matches or flashlights, a waterproof container for essential documents, and items
+// needed by older adults and persons with disabilities; and
+// 5) prepare a to-go kit that is ready in case of quick departure and includes a flashlight, extra
+// batteries, a battery-operated radio, a first-aid kit, contact lenses or eye glasses, medications,
+// copies of prescriptions, photo identification, copies of essential documents (birth certificate,
+// marriage certificate, Social Security card, and Medicare, Medicaid and other insurance cards),
+// and a small amount of cash (a maximum of $50). 
