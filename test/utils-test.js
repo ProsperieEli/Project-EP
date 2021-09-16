@@ -42,7 +42,7 @@ test('getEssentials should get the list of Needed Items from localStorage', (exp
     expect.deepEqual(actual, testUser.itemsNeeded);
 });
 
-test('setEssentials should set the to do items in localStorage', (expect) => {
+test('setEssentials should set the items needed in localStorage', (expect) => {
     localStorage.setItem(USER, JSON.stringify(testUser));
 
     const neededItems = [
