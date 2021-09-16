@@ -5,12 +5,20 @@ main {
     padding: 5px;
 
 }
-
+html {
+    min-height: 100%;
+    background-image: url(../assets/pexels-presentsquare-5681375.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 140%;
+    width: auto;
+}
 .list-itemEl {
     list-style: none;
     margin: 2px;
     padding: 3.25px;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid rgba(241,49,34,255);
 }
 
 li:first-child, last-child {
@@ -28,14 +36,35 @@ li:first-child, last-child {
 
 .completed-item {
     text-decoration: line-through;
-    color: darkgray;
+    color: rgb(150, 122, 122);
 }
 .buttonpie{
     display:flex;
     position:relative;
-    right:-485px;
+    right:-1197px;
+    top:-40px;
     margin-bottom: 10px;;
     cursor:pointer;
     border-radius: 40%;
     padding:8px;
+    background-color: var(--secondary-color);
+    color: black;
+}
+.buttonpie:hover{
+    background-color: rgba(241,49,34,255);
+    color: rgba(52,52,52,255);
+    transform: scale(1.25);
+}
+.frosted-background {
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin:10px;
+    padding:10px;
+    margin-top: 35px;
+}
+.instruct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
