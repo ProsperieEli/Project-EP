@@ -42,3 +42,9 @@ header {
     width: 90px;
     height: 90px;
 }
+
+.frosted-background {
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
