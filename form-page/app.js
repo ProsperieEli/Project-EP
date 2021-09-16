@@ -53,6 +53,7 @@ form.addEventListener('submit', (e) => {
     let suggestedItemTotal = calculateGoods(suggestedItems);
 
     window.location.href = '../preppy-page/index.html';
+    
 
     return neededItemTotal, suggestedItemTotal;
 });
