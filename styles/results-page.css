@@ -4,13 +4,22 @@ html {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    height: 100%;
     width: auto;
+}
+
+#complete-pie {
+    height: 300px;
+    width: 300px;
+    display: flex;
+}
+
+.chart-container {
+    width: 100%;
 }
 
 main {
     display: grid;
-    grid-template-rows: 1fr 1fr auto 1fr 1fr;
+    grid-template-rows: 2fr 1fr auto 1fr 1fr;
 }
 
 main > * {
@@ -27,12 +36,15 @@ main > * {
     width: 45%;
 }
 
-#essential-ul, #suggested-ul {
+.list-itemEl {
     list-style-type: none;
+    margin: 2px;
+    padding: 3.25px;
+    border-top: 1px solid lightgray;
 }
 
-.frosted-background {
-    padding: 20px;
-    background-color: var(--secondary-color);
-    border-radius: 10px;
+
+.completed-item {
+    text-decoration: line-through;
+    color: darkgray;
 }

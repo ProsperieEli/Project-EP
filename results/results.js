@@ -31,23 +31,29 @@ const myChart = new Chart(ctx,  //eslint-disable-line
         type: 'pie',
         data: {
             labels: [
-                'Required %',
-                'Suggested %',
-                'Missing required %',
-                'Missing suggested %',
+                'Required Items Owned',
+                'Suggested Items Owned',
+                'Missing Required Items',
+                'Missing Suggested Items',
         
             ],
             datasets: [{
-                label: 'Required %',
+                label: 'Overall Completed',
                 data: dataArray,
                 backgroundColor: [
-                    'rgb(255, 99, 132)',
-                    'rgb(54, 162, 235)',
-                    'rgb(255, 205, 86)',
-                    'rgb(245, 205, 80)'
+                    'rgb(234, 25, 28)',
+                    'rgb(234, 85, 28)',
+                    'rgba(234, 25, 29, 0.418)',
+                    'rgba(234, 85, 29, 0.418)'
                 ],
                 hoverOffset: 4
             }],
+        },
+        options: {
+            responsive: true,
+            legend: {
+                position: 'bottom'
+            }
         }
     });
     

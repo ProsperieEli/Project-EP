@@ -1,6 +1,6 @@
 :root {
     --primary-color: black;
-    --secondary-color: rgba(255, 255, 255, 0.397);
+    --secondary-color: rgba(255, 255, 255, 0.644);
 }
 
 * {
@@ -41,4 +41,10 @@ header {
 .logo {
     width: 90px;
     height: 90px;
+}
+
+.frosted-background {
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
 }
