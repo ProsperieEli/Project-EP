@@ -23,6 +23,10 @@ import { needsToRender } from './form-utils.js';
 
 const form = document.getElementById('user-form');
 
+
+
+
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const data = new FormData(form);
