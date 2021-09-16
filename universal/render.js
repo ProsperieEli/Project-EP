@@ -1,5 +1,5 @@
 import { setEssentials, setSuggested } from '../universal/local-storage-utils.js';
-export { renderEssentialsNeeded, renderSuggestedNeeded };
+export { renderEssentialsNeeded, renderSuggestedNeeded, renderLinks };
 
 function renderEssentialsNeeded(essentialItems){
     const essentialsUL = document.getElementById('essential-ul');
@@ -62,4 +62,29 @@ function renderSuggestedNeeded(suggestedItems){
             suggestedUL.append(listItemEl);
         } 
     }
+}
+
+function renderLinks(listOfItems, ulContainerElement) {
+    // ulContainerElement.innerHTML = '';
+
+    for (let item of listOfItems) {
+
+        const liEl = document.createElement('li');
+        const linkEl = document.createElement('a');
+        
+       
+        linkEl.textContent = item.description;
+        linkEl.href = item.link;
+        linkEl.target = '_blank';
+
+        liEl.classList.add('link-container');
+        linkEl.classList.add('link-item');
+
+        //a:visited pseudoselector was automatically applying to the dynamic links, so this is a workaround
+        linkEl.addEventListener('click', () => linkEl.classList.add('visited'));
+
+        liEl.append(linkEl);
+        ulContainerElement.append(liEl);
+    }
+    
 }
