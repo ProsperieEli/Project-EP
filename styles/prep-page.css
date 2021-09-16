@@ -11,7 +11,7 @@ html {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    height: 135%;
+    height: 140%;
     width: auto;
 }
 .list-itemEl {
@@ -36,7 +36,7 @@ li:first-child, last-child {
 
 .completed-item {
     text-decoration: line-through;
-    color: darkgray;
+    color: rgb(150, 122, 122);
 }
 .buttonpie{
     display:flex;
