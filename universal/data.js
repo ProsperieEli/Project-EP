@@ -260,21 +260,3 @@ export const suggestedItems = [
     
 ];
 
-// The U.S. Administration on Aging (AoA) says that, “although the exact nature of the emergency
-// cannot be predicted, there are preparations that apply to almost any kind of disaster.” AoA suggests that
-// older adults and their families:
-// 1) develop a family communication plan so that the whereabouts and well-being of every family
-// member is reported to a key person(s) during a disaster;
-// 2) plan how to keep informed of developments in the disaster situation by telephone, cell phone,
-// computer, radio, television, or newspaper;
-// 3) identify a meeting place away from home that is reasonably familiar and convenient for all family
-// members;
-// 4) maintain a supply of personal, health, and home supplies, including a two-week supply of
-// prescription medications, enough ready-to-eat food and water to last three days, first-aid supplies,
-// candles and matches or flashlights, a waterproof container for essential documents, and items
-// needed by older adults and persons with disabilities; and
-// 5) prepare a to-go kit that is ready in case of quick departure and includes a flashlight, extra
-// batteries, a battery-operated radio, a first-aid kit, contact lenses or eye glasses, medications,
-// copies of prescriptions, photo identification, copies of essential documents (birth certificate,
-// marriage certificate, Social Security card, and Medicare, Medicaid and other insurance cards),
-// and a small amount of cash (a maximum of $50). 
