@@ -1,27 +1,4 @@
 
-//should we delete?
-// export const user = {
-//     Name: '',
-//     YoungChildren: false,
-//     Dependents: 0,
-//     Adults: 0,
-//     Seniors: 0,
-//     // HouseholdTotal: (user.Dependents),
-//     Salary: 0,
-//     Pets: false,
-//     Savings: 0,
-//     HaveTransport: false,
-//     PrescriptionMed: false,
-//     PrescriptionEye: false,
-//     Assets: false,
-//     ItemsNeeded: [],
-//     ItemsSuggested: [],
-//     // stretch
-//     // location
-// };
-
-//change all data to generic sentence
-
 export const neededItems = [{
     id: 1,
     name: 'water',
