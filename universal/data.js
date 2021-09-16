@@ -75,7 +75,8 @@ export const neededItems = [{
     render: true,
     description: `Have 1 dust mask per person`,
     amountPerPerson: 1,
-    consumables: `dust masks`,        
+    numDays: 1,
+    consumables: 'dust-masks',      
 }, {
     id: 10,
     name: 'sheeting',
@@ -138,7 +139,9 @@ export const suggestedItems = [
         render: true,
         description: `Have 1 mask per person (for everyone ages 2 and above)`,
         amountPerPerson: 1,
-        consumables: `masks`,        
+        numDays: 1,
+        consumables: 'masks', 
+       
     },
     {
         id: 105,
@@ -188,7 +191,8 @@ export const suggestedItems = [
         render: true,
         description: `Have 1 change of clothing per person appropriate for your climate`,
         amountPerPerson: 1,
-        consumables: `sets`,        
+        numDays: 1,
+        consumables: 'sets',       
     },
     {
         id: 113,

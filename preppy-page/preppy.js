@@ -33,8 +33,8 @@ function renderEssentialsNeeded(essentialItems){
         //concat a sentence with a findbydescription/id function and add in backticks/literals for totalfamily, totalGoods of the id.name
         //go in render function on prep page
         if (item.amountPerPerson) {
-            const totalNeeded = (item.amountPerPerson * user.totalFamily) * item.numDays;
-            listItem.textContent = item.description + `You have ${user.totalFamily} members in your household. You will need ${totalNeeded} ${item.consumables} `;
+            const totalNeeded = Number((item.amountPerPerson * user.totalFamily) * item.numDays);
+            listItem.textContent = item.description + `. You have ${user.totalFamily} members in your household. You will need ${totalNeeded} ${item.consumables}. `;
         }
         listItem.addEventListener('click', () => {
             // change to completed = true when item clicked (!user.completed) classList.toggle
@@ -72,7 +72,7 @@ function renderSuggestedNeeded(suggestedItems){
 
             if (item.amountPerPerson) {
                 const totalSuggested = (item.amountPerPerson * user.totalFamily) * item.numDays;
-                listItem.textContent = item.description + `You have ${user.totalFamily} members in your household. You will need ${totalSuggested} ${item.consumables} `;
+                listItem.textContent = item.description + `. You have ${user.totalFamily} members in your household. You will need ${totalSuggested} ${item.consumables}. `;
             }
 
             listItem.addEventListener('click', () => {
