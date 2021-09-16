@@ -164,7 +164,7 @@ export const suggestedItems = [
         id: 108,
         name: 'pet',
         render: false,
-        description: 'Pet food and extra water for your pet',
+        description: '1 month supply of pet food, and 1 gallon of water on reserve (per pet)',
         link: 'https://www.amazon.com/Blue-Gallon-Water-Storage-WaterPrepared/dp/B0785BHYFG/ref=sr_1_4?dchild=1&keywords=water+storage&qid=1631822972&sr=8-4'        
     },
     {
@@ -178,14 +178,17 @@ export const suggestedItems = [
         id: 110,
         name: 'documents',
         render: true,
-        description: `Important family documents such as copies of insurance policies, identification and bank account records saved electronically or in a waterproof, portable container`,
+        description: `Copies of all vital records (stored digitally, in a waterproof/portable container, or both). Vital records include: insurance policies, investment records, pay stubs, benefits records, tax returns, wills, trusts and powers of attorney`,
         link: 'https://www.amazon.com/Blue-Gallon-Water-Storage-WaterPrepared/dp/B0785BHYFG/ref=sr_1_4?dchild=1&keywords=water+storage&qid=1631822972&sr=8-4'   
     },
     {
         id: 111,
         name: 'blankets',
         render: true,
-        description: 'Sleeping bag or warm blanket for each person',
+        description: 'Sleeping bag or warm blanket',
+        amountPerPerson: 1,
+        numDays: 1,
+        consumables: 'blankets',
         link: 'https://www.amazon.com/Blue-Gallon-Water-Storage-WaterPrepared/dp/B0785BHYFG/ref=sr_1_4?dchild=1&keywords=water+storage&qid=1631822972&sr=8-4'        
     },
     {
