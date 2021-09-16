@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/prep-page.css">
     <title>Document</title>
@@ -13,7 +12,15 @@
         <h1 class="left-header">Emergency Preparedness</h1>
         <img class="logo right-header" src="../assets/EP.png" alt="emergency preparedness logo">
     </header> 
+    <section class="frosted-background">
+      <h1 class="instruct">Welcome to Your List!</h1>
+      <p class="instruct">Compare what items you already have in your house or that you have on hand in case of an emergency. The lists that we provide are:</p>
+       <p class ="instruct">The Essential Items Needed list is what would be absolutely needed in the event of a weather emergency. </p>
+        <p class ="instruct">The Suggested Items Needed list is what we suggest that you also consider when preparing for a weather emergency. </p>
+        <p class ="instruct"> After you check of the items you have from the list, please click the "Get my Pie(chart)" to see your Emergency Preparedness %</p>
+    </section>
     <main>
+        </section>
         <section>
             <div>
                 <canvas id="essentials-progress"></canvas>
@@ -22,11 +29,11 @@
                 <canvas id="suggested-progress"></canvas>
             </div>
         </section>
-        <div id='essential-div'>
+        <div id='essential-div'class="frosted-background">
             <h1 id='essentialh1'>Essential Items Needed</h1>
             <ul id='essential-ul'></ul>
         </div>
-        <div id='suggested-div'>
+        <div id='suggested-div'class="frosted-background">
             <h1 id='suggestedh1'>Suggested Items Needed</h1>
             <ul id='suggested-ul'></ul>
         </div>
