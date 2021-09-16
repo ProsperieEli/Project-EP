@@ -250,5 +250,5 @@ export const suggestedItems = [
         description: 'Because you have insured assets, review your insurance coverage to ensure that your assets are properly protected',
         link: 'https://www.amazon.com/Blue-Gallon-Water-Storage-WaterPrepared/dp/B0785BHYFG/ref=sr_1_4?dchild=1&keywords=water+storage&qid=1631822972&sr=8-4'       
     }    
-    // add transportation (someone already marked 103 as transportation?)
+    
 ];
