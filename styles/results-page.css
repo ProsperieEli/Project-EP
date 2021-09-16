@@ -43,11 +43,7 @@ main > * {
     border-top: 1px solid lightgray;
 }
 
-.frosted-background {
-    padding: 20px;
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-}
+
 .completed-item {
     text-decoration: line-through;
     color: darkgray;
