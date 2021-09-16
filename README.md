@@ -16,6 +16,7 @@ Photo by <a href="https://unsplash.com/@nikolasnoonan?utm_source=unsplash&utm_me
 
 ## Results Index: 
 https://en.wikipedia.org/wiki/List_of_natural_disasters_in_the_United_States
+Photo by <a href="https://unsplash.com/@janoschphotos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Janosch Diggelmann</a> on <a href="https://unsplash.com/s/photos/rescue?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 ## Prep List: 
 https://www.electricgeneratorsdirect.com/stories/6-How-to-Safely-Stockpile-Emergency-Gasoline.html
