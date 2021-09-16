@@ -123,9 +123,9 @@ export const suggestedItems = [
     },
     {
         id: 103,
-        name: 'transportation',
+        name: 'generator',
         render: false,
-        description: 'links to additional transportation',
+        description: 'generator',
         link: 'https://www.amazon.com/Blue-Gallon-Water-Storage-WaterPrepared/dp/B0785BHYFG/ref=sr_1_4?dchild=1&keywords=water+storage&qid=1631822972&sr=8-4'        
     },
     {
