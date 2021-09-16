@@ -1,4 +1,4 @@
-const USER = 'USER';
+export const USER = 'USER';
 
 export function getUser() {
     const stringyUser = localStorage.getItem(USER);
