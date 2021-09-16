@@ -125,7 +125,7 @@ export const suggestedItems = [
         id: 103,
         name: 'generator',
         render: false,
-        description: `In the event of a power outage have at least 25-30 gallons of gas on-hand. To store safely, be sure to invest in a fuel tank with a siphon and make sure to add a couple ounces of fuel stabilizer per 5-gallons prior to filling.`,
+        description: `In the event of a power outage have at least 25-30 gallons of gas on-hand. To store safely, be sure to invest in a fuel tank with a siphon and make sure to add a couple ounces of fuel stabilizer per 5-gallons prior to filling`,
         link: 'https://www.amazon.com/Blue-Gallon-Water-Storage-WaterPrepared/dp/B0785BHYFG/ref=sr_1_4?dchild=1&keywords=water+storage&qid=1631822972&sr=8-4'        
     },
     {
