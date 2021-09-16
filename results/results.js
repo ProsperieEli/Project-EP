@@ -1,6 +1,6 @@
 import { getEssentialsList, getSuggestedList } from '../universal/local-storage-utils.js';
 
-import { renderEssentialsNeeded, renderSuggestedNeeded } from '../universal/render.js';
+import { renderLinks } from '../universal/render.js';
 
 const essentialList = getEssentialsList();
 const suggestedList = getSuggestedList();
@@ -75,5 +75,8 @@ const suggestedRemaining = suggested
         }
     });
 
-renderEssentialsNeeded(essentialsRemaining);
-renderSuggestedNeeded(suggestedRemaining);
+const essentialsUL = document.getElementById('essential-ul');
+const suggestedUL = document.getElementById('suggested-ul');
+
+renderLinks(essentialsRemaining, essentialsUL);
+renderLinks(suggestedRemaining, suggestedUL);

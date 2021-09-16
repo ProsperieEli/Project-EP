@@ -36,13 +36,21 @@ main > * {
     width: 45%;
 }
 
-.list-itemEl {
+.link-container {
     list-style-type: none;
     margin: 2px;
     padding: 3.25px;
     border-top: 1px solid lightgray;
 }
 
+.link-item {
+    color: black;
+    text-decoration: none;
+}
+
+.visited {
+    color: rgba(234, 25, 29, 0.618);
+}
 
 .completed-item {
     text-decoration: line-through;
