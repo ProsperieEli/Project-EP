@@ -72,5 +72,13 @@ form > * {
     background-color: var(--primary-color);
     width: 100px;
     height: 50px;
+    cursor: pointer;
+    transition: ease-in-out all .36s;
+}
+#sub-btn:hover{
+    background-color:white;
+    color: black;
+    transform: scale(1.25);
+   
 }
 
