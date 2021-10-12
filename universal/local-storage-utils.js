@@ -13,7 +13,7 @@ export function setUser(user) {
 }
 
 export function getEssentialsList() {
-    const { itemsNeeded } = getUser();
+    const { itemsNeeded } = getUser(); // nice destructuring in this file!
 
     return itemsNeeded;
 }
@@ -43,6 +43,7 @@ export function setSuggested(suggestedItems) {
 //*universal for function, call func on form-page* add completed = false to all essential and suggested
 //*preppy* eventlistener: change to completed = true when item clicked (!user.completed) classList.toggle
 
+// such a slick function!
 export function addCompletedProp() {
     const essentials = getEssentialsList();
     const suggested = getSuggestedList();
@@ -60,6 +61,7 @@ export function addCompletedProp() {
 
 }
 
+// it's cool to see your stretch goal planning out here. TODOs in production codebases are very common
 //Ticket 2
 // calculate amount of food and water
 // take in total household # and multiply by (amount: 1gallon/day for numDays: 3 days,  3 meals/day for 3 days, 1 mask/person, 1 sleeping bag/person, 1 extra set of clothing per person)
