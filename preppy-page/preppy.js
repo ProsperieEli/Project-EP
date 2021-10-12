@@ -7,14 +7,14 @@ import { renderEssentialsNeeded, renderSuggestedNeeded } from '../universal/rend
 const essentialItemsList = getEssentialsList();
 const suggestedItemsList = getSuggestedList();
 
-
+// so clean, thanks to these render functions! . . . you might even be able to move the `getEssentialList` and `getSuggestedList` calls to the function to make this page super clean
 renderEssentialsNeeded(essentialItemsList);
 renderSuggestedNeeded(suggestedItemsList);
 
 
-const getpiebutton = document.getElementById('go-to-results');
+const getPieButton = document.getElementById('go-to-results'); // i'd like to see this camelCased
 
-getpiebutton.addEventListener('click', () => {
+getPieButton.addEventListener('click', () => {
     window.location.href = '../results/index.html';
 });
 

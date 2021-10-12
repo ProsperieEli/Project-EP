@@ -43,6 +43,7 @@ form.addEventListener('submit', (e) => {
 
     //change render to true based on user input
     const userWithLists = getUser();
+    // woooah
     const possibleItems = userWithLists.tOrF;
     possibleItems.forEach(({ id, toggle }) => {
         if (toggle === 'on') {

@@ -5,24 +5,24 @@ import { renderLinks } from '../universal/render.js';
 const essentialList = getEssentialsList();
 const suggestedList = getSuggestedList();
 
-const completedRequiredItems = essentialList
-    .filter(essential => essential.render === true)
-    .filter(({ completed }) => completed === true);
+// again, silly name I came up with, I bet you can find something better
+function getRendereablesByCompletedStatus(list, shouldBeComplete = true) { // here i'm setting shouldBeComplete to true by default
+    return list
+        .filter(({ render }) => render === true)
+        .filter(({ completed }) => completed === shouldBeComplete);
+}
 
-const completedNeededItems = suggestedList
-    .filter(needed => needed.render === true)
-    .filter(({ completed }) => completed === true);
+const completedRequiredItems = getRendereablesByCompletedStatus(essentialList);
+const completedNeededItems = getRendereablesByCompletedStatus(suggestedList);
+const uncompletedRequiredItems = getRendereablesByCompletedStatus(essentialList, false);
+const uncompletedNeededItems = getRendereablesByCompletedStatus(suggestedList, false);
 
-
-const uncompletedRequiredItems = essentialList
-    .filter(essential => essential.render === true)
-    .filter(({ completed }) => completed === false);
-
-const uncompletedNeededItems = suggestedList
-    .filter(needed => needed.render === true)
-    .filter(({ completed }) => completed === false);
-
-const dataArray = [completedRequiredItems.length, completedNeededItems.length, uncompletedRequiredItems.length, uncompletedNeededItems.length];
+const dataArray = [
+    completedRequiredItems.length, 
+    completedNeededItems.length, 
+    uncompletedRequiredItems.length, 
+    uncompletedNeededItems.length
+];
 
 const ctx = document.getElementById('myChart');
 const myChart = new Chart(ctx,  //eslint-disable-line 
@@ -57,26 +57,10 @@ const myChart = new Chart(ctx,  //eslint-disable-line
         }
     });
     
-//Render lists of remaining items needed
-const essentials = getEssentialsList();
-const suggested = getSuggestedList();
-
-const essentialsRemaining = essentials
-    .filter(item => {
-        if (item.render === true && item.completed === false) {
-            return item;
-        }
-    });
-
-const suggestedRemaining = suggested
-    .filter(el => {
-        if (el.render === true && el.completed === false) {
-            return el;
-        }
-    });
 
 const essentialsUL = document.getElementById('essential-ul');
 const suggestedUL = document.getElementById('suggested-ul');
 
-renderLinks(essentialsRemaining, essentialsUL);
-renderLinks(suggestedRemaining, suggestedUL);
+// seems like these don't change on this page, right? and the filter looks to be the same as the one used upstairs. Seems like we could just reuse those?
+renderLinks(uncompletedRequiredItems, essentialsUL);
+renderLinks(uncompletedNeededItems, suggestedUL);
